@@ -6,7 +6,7 @@ This is a web catalog server that allows users to come onto the site and view it
 
 To start, you'll be using a virtual machine with vagrant. I've borrowed the readme text from Udacity's course to guide those who need it, and will list it at the end.
 
-To use this program, follow the VM installation instructions, including for the vagrant file. Once inside, install flask. To get started with the program, run the database_setup.py file to create the database. To fill it with various items after, run the lotsofitems.py file. Do not do this if you only want specific things in your database.
+To use this program, follow the VM installation instructions, including for the vagrant file. Boot the virtual machine and go to the catalog folder. Once inside, install flask. To get started with the program, run the database_setup.py file to create the database. To fill it with various items after, run the lotsofitems.py file. Do not do this if you only want specific things in your database.
 
 
 Note: To add items to the database, you may either change the items and descriptions in the lotsofitems.py file by hand, or simply interact with the website through its interface to add items that way.
