@@ -1,37 +1,30 @@
-# Full Stack Web Developer Nanodegree program virtual machine
+# Catalog Project
 
-<a href="https://www.udacity.com/">
-  <img src="https://s3-us-west-1.amazonaws.com/udacity-content/rebrand/svg/logo.min.svg" width="300" alt="Udacity logo">
-</a>
-
-Virtual machine for the [Relational Databases](https://www.udacity.com/course/intro-to-relational-databases--ud197) and [Full Stack Foundations](https://www.udacity.com/course/full-stack-foundations--ud088) courses in the [Full Stack Web Developer Nanodegree program](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004)
-
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Intro](#intro)
-- [Installation](#installation)
-- [Instructions](#instructions)
-- [Troubleshooting](#troubleshooting)
-- [Supporting Materials](#supporting-materials)
 
 ## Intro
+This is a web catalog server that allows users to come onto the site and view items by category. If they login with google, they can add, edit and delete items (but only those they've created).
 
-In the next part of this course, you'll use a virtual machine (VM) to run an SQL database server and a web app that uses it. The VM is a Linux server system that runs on top of your own computer. You can share files easily between your computer and the VM; and you'll be running a web service inside the VM which you'll be able to access from your regular browser.
+To start, you'll be using a virtual machine with vagrant. I've borrowed the readme text from Udacity's course to guide those who need it, and will list it at the end.
 
-We're using tools called [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1) to install and manage the VM. You'll need to install these to do some of the exercises. The instructions on this page will help you do this.
+To use this program, follow the VM installation instructions, including for the vagrant file. Once inside, install flask. To get started with the program, run the database_setup.py file to create the database. To fill it with various items after, run the lotsofitems.py file. Do not do this if you only want specific things in your database.
+
+
+Note: To add items to the database, you may either change the items and descriptions in the lotsofitems.py file by hand, or simply interact with the website through its interface to add items that way.
+
+
+
+This website uses google authorization/authentication. Users will simply navigate to the login page, follow the instructions, and be able to use the site.
+
+
+
+
+For this program, you'll be using a virtual machine (VM) to run an SQL database server and a web app that uses it. The VM is a Linux server system that runs on top of your own computer. You can share files easily between your computer and the VM; and you'll be running a web service inside the VM which you'll be able to access from your regular browser.
+
+I'm using tools called [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1) to install and manage the VM. You'll need to install these. The instructions on this page will help you do this.
 
 ### Conceptual overview
 
 [This video](https://www.youtube.com/watch?v=djnqoEO2rLc) offers a conceptual overview of virtual machines and Vagrant. You don't need to watch it to proceed, but you may find it informative.
-
-### Use a terminal
-
-You'll be doing these exercises using a Unix-style terminal on your computer. If you are using a **Mac or Linux** system, your regular terminal program will do just fine. On **Windows**, we recommend using the **Git Bash** terminal that comes with the Git software. If you don't already have Git installed, download Git from [git-scm.com](https://git-scm.com/downloads).
-
-For a refresher on using the Unix shell, look back at [our Shell Workshop](https://www.udacity.com/course/ud206).
-
-If you'd like to learn more about Git, take a look at [our course about Git](https://www.udacity.com/course/ud123).
 
 ## Installation
 
@@ -95,15 +88,7 @@ Inside the VM, change directory to `/vagrant` and look around with `ls`.
 
 The files you see here are the same as the ones in the `vagrant` subdirectory on your computer (where you started Vagrant from). Any file you create in one will be automatically shared to the other. This means that you can edit code in your favorite text editor, and run it inside the VM.
 
-Files in the VM's `/vagrant` directory are shared with the `vagrant` folder on your computer. But other data inside the VM is not. For instance, the PostgreSQL database itself lives only inside the VM.
-
-### Running the database
-
-The PostgreSQL database server will automatically be started inside the VM. You can use the `psql` command-line tool to access it and run SQL statements:
-
-![linux-vm-PostgreSQL](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/58489186_screen-shot-2016-12-07-at-14.46.25/screen-shot-2016-12-07-at-14.46.25.png)
-
-_Running `psql`, the PostgreSQL command interface, inside the VM._
+Files in the VM's `/vagrant` directory are shared with the `vagrant` folder on your computer. But other data inside the VM is not.
 
 ### Logging out and in
 
