@@ -1,0 +1,36 @@
+<html>
+
+	<head>
+		<!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}"> -->
+		
+	</head>
+
+
+	<body>
+			<a href="{{url_for('loginPage')}}"> Log In Here With Google! </a>
+			<br>
+			<a href="{{url_for('signoutPage')}}" id="sobutton">Log Out Here</a>
+
+		<h1>Catalog</h1>
+
+			{% for c in categories %}
+
+				<div>
+					</br>
+					<h3><a href="{{url_for('showItems', category_id=c.id)}}"> {{c.name}} </a></h3>
+				</div>
+
+
+			{% endfor %}
+
+
+	</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$( "#sobutton" ).click(function() {
+			document.cookie = "id_token=; expires=Thu, 18 Dec 2000 12:00:00 UTC";
+		}
+		)
+		
+	</script>
+</html>

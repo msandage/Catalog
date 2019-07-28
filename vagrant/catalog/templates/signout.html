@@ -1,0 +1,18 @@
+<html>
+
+	<head>
+		<!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}"> -->
+		
+	</head>
+
+
+	<body>
+		You are now signed out.
+		<a href="{{url_for('showCategories')}}"> Back To Catalog List </a>
+
+
+	</body>
+	<script>
+			document.cookie = "id_token=; expires=Thu, 18 Dec 2000 12:00:00 UTC";		
+	</script>
+</html>

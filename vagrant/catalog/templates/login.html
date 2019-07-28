@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<meta name="google-signin-client_id" content="288672852457-sbam2efcfl8gcp78g3tnq7l8g9bmaggd.apps.googleusercontent.com">
+	</head>
+
+	<body>
+		Login:
+		<div id="my-signin2"> </div>
+	</body>
+
+	<script>
+	    function onSuccess(googleUser) {
+	      	console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+
+			var id = googleUser.getId();
+			var email = googleUser.getBasicProfile().getEmail();
+			var id_token = googleUser.getAuthResponse().id_token;
+			document.cookie = "id_token=" + id_token;
+			document.location = '/';
+
+			// const body = {
+			// 	id: googleUser.getId(),
+			// 	email: googleUser.getBasicProfile().getEmail(),
+			// 	id_token: googleUser.getAuthResponse().id_token,
+			// }
+	  		// var xhr = new XMLHttpRequest();
+			// xhr.onreadystatechange = function() {};
+			// xhr.open('POST', '/login');
+			// xhr.send(JSON.stringify(body))
+	    }
+
+	    function onFailure(error) {
+	      console.log('FAILED TO LOGIN', error);
+	    }
+
+	    function renderButton() {
+	      gapi.signin2.render('my-signin2', {
+	        'scope': 'profile email',
+	        'width': 240,
+	        'height': 50,
+	        'longtitle': true,
+	        'theme': 'dark',
+	        'onsuccess': onSuccess,
+	        'onfailure': onFailure
+	      });
+	    }
+	</script>
+
+	 <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+</html>
